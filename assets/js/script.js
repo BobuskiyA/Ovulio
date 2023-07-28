@@ -132,6 +132,8 @@ $(document).ready(function($) {
 	});
 });
 
+let time = 0;
+
 
 function fisrtScreen() {
 	const box = document.querySelector('.first-screen');
@@ -146,6 +148,11 @@ function fisrtScreen() {
 		if (entry.isIntersecting) {
 			function setTimeOnWheelFirst() {
 				document.onwheel = function ( event ) {
+
+					if( Date.now() - time < 2000 ){
+						return false;
+					}
+					time = Date.now();
 
 					let fisrtScreen = document.querySelector('.first-screen');
 					let technologyFirstScreen = document.querySelector('.technology__first-screen');
@@ -180,7 +187,7 @@ function fisrtScreen() {
 					}
 				}
 			}
-			setTimeout(setTimeOnWheelFirst, 3500);
+			setTimeout(setTimeOnWheelFirst, 0);
 		}
 	});
 	}, options);
@@ -202,6 +209,12 @@ function technologyFirstScreen() {
 		if (entry.isIntersecting) {
 			function setTimeOnWheelSecond() {
 				document.onwheel = function ( event ) {
+
+					if( Date.now() - time < 2000 ){
+						
+						return false;
+					}
+					time = Date.now();
 
 					let fisrtScreen = document.querySelector('.first-screen');
 					let technologyFirstScreen = document.querySelector('.technology__first-screen');
@@ -246,7 +259,7 @@ function technologyFirstScreen() {
 					}
 				}
 			}
-			setTimeout(setTimeOnWheelSecond, 3500);
+			setTimeout(setTimeOnWheelSecond, 0);
 		}
 	});
 	}, options);
@@ -268,6 +281,12 @@ function technologySecondScreen() {
 		if (entry.isIntersecting) {
 			function setTimeOnWheelThird() {
 				document.onwheel = function ( event ) {
+
+					if( Date.now() - time < 2000 ){
+						
+						return false;
+					}
+					time = Date.now();
 
 					let technologyFirstScreen = document.querySelector('.technology__first-screen');
 					let technologySecondScreen = document.querySelector('.technology__second-screen');
@@ -302,7 +321,7 @@ function technologySecondScreen() {
 					}
 				}
 			}
-			setTimeout(setTimeOnWheelThird, 3500);
+			setTimeout(setTimeOnWheelThird, 0);
 		}
 	});
 	}, options);
@@ -325,6 +344,12 @@ function instruction() {
 		if (entry.isIntersecting) {
 			function setTimeOnWheelInstruction() {
 				document.onwheel = function ( event ) {
+
+					if( Date.now() - time < 2000 ){
+						
+						return false;
+					}
+					time = Date.now();
 
 					let technologySecondScreen = document.querySelector('.technology__second-screen');
 					let instruction = document.querySelector('.instruction');
@@ -356,7 +381,7 @@ function instruction() {
 					}
 				}
 			}
-			setTimeout(setTimeOnWheelInstruction, 3500);
+			setTimeout(setTimeOnWheelInstruction, 0);
 		}
 	});
 	}, options);
@@ -379,6 +404,12 @@ function kit() {
 		if (entry.isIntersecting) {
 			function setTimeOnWheelKit() {
 				document.onwheel = function ( event ) {
+
+					if( Date.now() - time < 2000 ){
+						
+						return false;
+					}
+					time = Date.now();
 
 					let team = document.querySelector('.team');
 					let instruction = document.querySelector('.instruction');
@@ -408,7 +439,7 @@ function kit() {
 					}
 				}
 			}
-			setTimeout(setTimeOnWheelKit, 3500);
+			setTimeout(setTimeOnWheelKit, 0);
 		}
 	});
 	}, options);
@@ -432,6 +463,12 @@ function team() {
 			function setTimeOnWheelTeam() {
 				document.onwheel = function ( event ) {
 
+					if( Date.now() - time < 2000 ){
+						
+						return false;
+					}
+					time = Date.now();
+
 					let team = document.querySelector('.team');
 					let kit = document.querySelector('.kit');
 					let branchWhite = document.querySelector('.branch.branch-white__first.branch-pink');
@@ -452,7 +489,7 @@ function team() {
 					}
 				}
 			}
-			setTimeout(setTimeOnWheelTeam, 3500);
+			setTimeout(setTimeOnWheelTeam, 0);
 		}
 	});
 	}, options);
